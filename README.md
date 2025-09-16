@@ -1,1 +1,35 @@
-This notebook implements a solution for the NEURIPS 2025 Open Polymer Prediction competition, predicting five physical properties of polymers (Glass Transition Temperature, Fractional Free Volume, Crystallization Temperature, Density, and Radius of Gyration) from their SMILES molecular representations. The approach combines traditional machine learning with deep learning, using a stacked ensemble of XGBoost and Random Forest models trained on RDKit-derived molecular descriptors and Morgan/MACCS fingerprints, alongside a pre-trained Graph Attention Network (GNN) that learns from molecular graph structures. The pipeline augments the training data with external polymer datasets, performs feature engineering including Mordred descriptors, trains separate models for each target property using 5-fold cross-validation, and finally combines predictions through a meta-model (XGBoost) that learns optimal weights between the tree-based and GNN predictions. This hybrid approach leverages both traditional cheminformatics features and graph-based representations to capture different aspects of polymer structure-property relationships.
+Project Overview
+This notebook presents a hybrid machine learning approach for predicting five critical physical properties of polymers from their SMILES molecular representations:
+
+Glass Transition Temperature (Tg)
+Fractional Free Volume (FFV)
+Crystallization Temperature (Tc)
+Density
+Radius of Gyration (Rg)
+
+Methodology
+Data Enhancement
+
+Integrates multiple external polymer datasets to expand training data from ~8,000 to over 11,000 samples
+Implements SMILES augmentation to increase training diversity
+
+Feature Engineering
+
+Molecular Descriptors: RDKit-based chemical properties, Mordred descriptors, and graph-based features
+Fingerprints: Morgan (radius=2, 128 bits) and MACCS keys for structural representation
+Feature Selection: Variance threshold filtering optimized per target property
+
+Model Architecture
+Ensemble Approach:
+
+Tree-based Models: XGBoost + Random Forest trained on molecular descriptors and fingerprints
+Graph Neural Network: Pre-trained GNN with Graph Attention layers (GATConv) learning from molecular graph structures
+Meta-Model: XGBoost stacking ensemble that optimally combines predictions from both approaches
+
+Performance (Cross-Validation MAE)
+
+Tg: 13.80°C
+FFV: 0.0027
+Tc: 0.0148
+Density: 0.0159 g/cm³
+Rg: 0.498 Å
