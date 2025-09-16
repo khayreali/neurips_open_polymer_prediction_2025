@@ -2,7 +2,7 @@
 
 Competition Rank: 306/2285
 
-!(screenshot.png)
+![Alt text](screenshot.png)
 
 ## Overview
 
