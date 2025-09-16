@@ -1,7 +1,8 @@
 # NeurIPS 2025 - Open Polymer Prediction
 
 Competition Rank: 306/2285
-![Alt text](screenshot.png)
+
+!(screenshot.png)
 
 ## Overview
 
