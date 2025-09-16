@@ -64,7 +64,3 @@ The ensemble consistently outperforms individual model components, with particul
 The code relies on RDKit 2025.3.3 for molecular processing, PyTorch/PyTorch Geometric for the GNN, and standard ML libraries (XGBoost, scikit-learn) for tree-based models. Mordred is used for advanced descriptor calculation.
 
 Feature importance analysis reveals that molecular weight, topological polar surface area, and rotatable bond count are consistently important across properties, while target-specific features (e.g., fraction of sp3 carbons for density) provide additional predictive power.
-
-## Authors
-
-Majd Shammout and Khayre Ali (Team: CUDAWOULDASHOULDA)
