@@ -5,7 +5,7 @@
 
 ## Overview
 
-This notebook tackles the problem of predicting five physical properties of polymers from SMILES molecular representations. The approach combines tree-based models trained on molecular descriptors with a graph neural network that operates directly on molecular structure.
+This notebook works to predict five physical properties of polymers from SMILES molecular representations. The approach combines tree-based models trained on molecular descriptors with a graph neural network that operates directly on molecular structure.
 
 ## Target Properties
 
