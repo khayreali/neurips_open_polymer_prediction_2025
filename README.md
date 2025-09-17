@@ -1,7 +1,7 @@
 # NeurIPS 2025 - Open Polymer Prediction
 
 
-![Competition ranking](screenshot.png)
+![Competition ranking](competition_results.png)
 
 ## Overview
 
